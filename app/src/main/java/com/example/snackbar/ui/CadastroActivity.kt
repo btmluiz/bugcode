@@ -18,13 +18,15 @@ class CadastroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cadastro)
 
-       btn_cadastrar.setOnClickListener {
-           callMain(getInformationUser())
-       }
+        btn_cadastrar.setOnClickListener {
+            callMain(getInformationUser())
+        }
+
+
     }
 
     //Pega as informações do usuario
-    fun getInformationUser(): Usuario{
+    fun getInformationUser(): Usuario {
         val username = edUserName.text.toString()
         val senha = edPassword.text.toString()
 
@@ -32,7 +34,7 @@ class CadastroActivity : AppCompatActivity() {
     }
 
     //Chama MainActivity
-    fun callMain(usuario: Usuario){
+    fun callMain(usuario: Usuario) {
         var intent = Intent(this, MainActivity::class.java)
         intent.putExtra("key", usuario)
         startActivity(intent)

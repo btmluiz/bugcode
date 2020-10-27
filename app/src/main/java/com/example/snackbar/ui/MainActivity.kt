@@ -7,15 +7,19 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.example.snackbar.R
 import com.example.snackbar.`interface`.ContractMainActivity
+import com.example.snackbar.domain.Gasto
 import com.example.snackbar.domain.Usuario
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.tab_entrada.*
 import kotlinx.android.synthetic.main.tab_gastos.*
 import kotlinx.android.synthetic.main.tab_home.*
+import java.time.LocalDateTime
 
 class MainActivity : AppCompatActivity(), ContractMainActivity {
 
     val TAG: String = "MainActivity"
+
+    private var gastos = mutableListOf<Gasto>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -113,6 +117,15 @@ class MainActivity : AppCompatActivity(), ContractMainActivity {
 
     fun showToast(msg: String) {
         Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
+    }
+
+    fun cadastrarGasto(
+        descricao: String,
+        categoria: String,
+        dateTime: String,
+        valor: Double
+    ) {
+        gastos.add(Gasto(descricao, categoria, dateTime, valor))
     }
 
 }

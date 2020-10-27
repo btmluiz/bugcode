@@ -20,4 +20,14 @@
     <string name="tv_home">Home</string>
     <string name="tvEntrada">Entradas</string>
     <string name="tvGasto">Gastos</string>
+    <string name="descri_o">Descrição</string>
+    <string name="categoria">Categoria</string>
+    <string name="dateTime">Data - hora</string>
+    <string name="price">Valor</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
 </resources>
